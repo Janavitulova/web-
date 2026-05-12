@@ -1,0 +1,268 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Asap', sans-serif;
+    min-height: 100vh; /* Změněno z height na min-height kvůli scrollování */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* overflow: hidden;  <-- Toto jsem smazal, aby ses na 2. stránce dostal k textu */
+}
+/* --- STRÁNKA 1 (MATCHA) --- */
+.container {
+    width: 90%;
+    max-width: 1200px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.text-content {
+    flex: 1;
+    padding-right: 50px;
+}
+
+h1 {
+    font-size: 8rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    letter-spacing: -2px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 500px;
+    text-align: justify;
+}
+
+.image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.navigation-arrow {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.arrow-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ffffff;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    transition: 0.3s ease;
+}
+
+.arrow-button:hover {
+    border-color: #84bd00; /* Zelená barva RAL 6018 */
+    color: #84bd00;
+}
+
+/* --- STRÁNKA 2 (KVALITA) --- */
+.container-quality {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 0 20px;
+    height: 60vh;
+}
+
+.grid-item {
+    overflow: hidden;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-footer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.text-footer h2 {
+    font-size: 4rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.text-footer p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.navigation-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    width: 100%;
+}
+
+/* --- RESPONZIVITA (pro mobily) --- */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+    h1 {
+        font-size: 4rem;
+    }
+    .text-content {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    .navigation-arrow {
+        position: relative;
+        margin-top: 20px;
+    }
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* --- STRÁNKA 3 (KDE KOUPIT) --- */
+.container-contact {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+
+/* Stylování obrázků vlevo */
+.contact-images {
+    display: flex;
+    gap: 15px;
+    flex: 1;
+}
+
+.img-col-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.img-col-left img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.img-col-right img {
+    width: 200px;
+    height: 375px;
+    object-fit: cover;
+}
+
+/* Stylování textu vpravo */
+.contact-info {
+    flex: 1;
+    padding-left: 80px;
+}
+
+.contact-info h2 {
+    font-size: 5rem;
+    font-weight: 400;
+    margin-bottom: 50px;
+    text-transform: none;
+}
+
+.contact-table {
+    width: 100%;
+}
+
+.contact-row {
+    display: flex;
+    border-bottom: 1px solid #ffffff;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+.contact-row:last-child {
+    border-bottom: 1px solid #ffffff;
+}
+
+.label {
+    width: 150px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.value {
+    flex: 1;
+}
+
+/* Šipka zpět */
+.navigation-back {
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+}
+
+/* Responzivita pro 3. stránku */
+@media (max-width: 900px) {
+    .contact-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contact-info {
+        padding-left: 0;
+        margin-top: 50px;
+    }
+    .contact-images {
+        justify-content: center;
+    }
+    .contact-row {
+        text-align: left;
+    }
+}

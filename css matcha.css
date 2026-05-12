@@ -1,0 +1,110 @@
+/* Import fontu Asap z Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Asap', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Styl pro hlavní nadpis */
+.text-content {
+    flex: 1;
+    padding-right: 50px;
+}
+
+h1 {
+    font-size: 8rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    letter-spacing: -2px;
+}
+
+/* Styl pro odstavec */
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 500px;
+    text-align: justify;
+}
+
+/* Styl pro obrázek */
+.image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%; /* Aby fotka byla v kruhu jako na předloze */
+}
+
+/* Kruhové tlačítko se šipkou */
+.navigation-arrow {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.arrow-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ffffff;
+    border-radius: 15px; /* Zaoblený čtverec podle předlohy */
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    transition: 0.3s ease;
+}
+
+.arrow-button:hover {
+    border-color: #84bd00; /* Zelená barva RAL 6018 při najetí */
+    color: #84bd00;
+}
+
+/* Responzivita pro menší obrazovky */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+    h1 {
+        font-size: 4rem;
+    }
+    .text-content {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    .navigation-arrow {
+        position: relative;
+        margin-top: 20px;
+    }
+}
